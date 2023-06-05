@@ -1,11 +1,24 @@
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import LogoS from '../../../assets/images/selfy.PNG'
+import React, { useState, useEffect } from 'react';
+import LogoS from '../../../assets/images/selfy-modified.png'
 import './index.scss'
 
 const Logo = () => {
-  const bgRef = useRef()
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <div className='logo-container'>
+    <div className={`fade-in-image ${isVisible ? 'visible' : ''}`}>
+      <img src={LogoS} alt="Me" />
+    </div>
+    </div>
+  );
+
+
+  /*const bgRef = useRef()
   const outlineLogoRef = useRef()
   const solidLogoRef = useRef()
 
@@ -40,12 +53,12 @@ const Logo = () => {
     <div className="logo-container" ref={bgRef}>
       <img
         className="solid-logo"
-        ref={solidLogoRef}
+        //ref={solidLogoRef}
         src={LogoS}
         alt="JavaScript,  Developer"
       />
     </div>
-  )
+  )*/
 }
 
 export default Logo

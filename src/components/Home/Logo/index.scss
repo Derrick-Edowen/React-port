@@ -1,25 +1,28 @@
 .logo-container {
   z-index: 0;
-  width: 400px;
-  height: 609px;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 15%;
+  width: 30%;
+  height: 700px;
+  position: fixed;
+  top: -300px;
+  right: 450px;
   bottom: 0;
   left: auto;
   margin: auto;
 
-  .solid-logo {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: 30px;
-    left: -300px;
-    margin: auto;
-    width: 200%;
+  .fade-in-image {
     opacity: 0;
-    transform: rotateZ(10deg) !important;
-    z-index: 1;
+    transition: opacity 0.5s;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .fade-in-image.visible {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    width: 125%;
+    height: 125%;
   }
 }
