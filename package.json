@@ -1,8 +1,8 @@
 {
-  "homepage": "https://Derrick-Edowen.github.io/Derrick-Edowen-Portfolio",
   "name": "react-portfolio-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Derrick-Edowen.github.io/Derrick-Edowen-Portfolio",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
