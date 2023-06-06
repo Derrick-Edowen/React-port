@@ -1,5 +1,6 @@
 import './index.scss'
 import { useState } from 'react'
+import LogoS from '../../assets/images/selfy-modified.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
@@ -13,13 +14,19 @@ import {
   faBars,
   faClose,
 } from '@fortawesome/free-solid-svg-icons'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
     <div className="nav-bar">
+      <Link 
+        className="logo"
+        to="/"
+        onClick={() => setShowNav(false)}>
+        <img src={LogoS} alt="selfy" />
+      </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink 
           exact="true"
